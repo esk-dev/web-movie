@@ -1,4 +1,5 @@
 {
+  "extends": ["../../../.eslintrc.base.json"],
   "ignorePatterns": ["!**/*"],
   "overrides": [
     {
@@ -12,14 +13,12 @@
         "plugin:@nx/angular",
         "plugin:@angular-eslint/template/process-inline-templates"
       ],
-      "parserOptions": {
-        "project": ["./tsconfig.*?.json"]
-      },
       "rules": {
         "@angular-eslint/directive-selector": [
           "error",
           {
             "type": "attribute",
+            "prefix": "lib",
             "style": "camelCase"
           }
         ],
@@ -27,6 +26,7 @@
           "error",
           {
             "type": "element",
+            "prefix": "lib",
             "style": "kebab-case"
           }
         ]
@@ -37,6 +37,5 @@
       "extends": ["plugin:@nx/angular-template"],
       "rules": {}
     }
-  ],
-  "extends": ["./.eslintrc.base.json"]
+  ]
 }

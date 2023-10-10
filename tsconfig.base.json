@@ -15,10 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "auth": ["libs/auth/src/index.ts"],
-      "core": ["libs/core/src/index.ts"],
-      "shared-ui": ["libs/ui/src/index.ts"],
-      "ui": ["libs/ui/src/index.ts"]
+      "layout": ["libs/ui/layout/src/index.ts"],
+      "login": ["libs/auth/login/src/index.ts"],
+      "root-store": ["libs/core/root-store/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

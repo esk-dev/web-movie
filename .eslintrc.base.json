@@ -5,6 +5,13 @@
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "extends": [
+        "plugin:@nx/angular",
+        "plugin:prettier/recommended",
+        "plugin:@rx-angular/recommended",
+        "plugin:perfectionist/recommended-natural",
+        "plugin:@angular-eslint/template/process-inline-templates"
+      ],
       "rules": {
         "@nx/enforce-module-boundaries": [
           "error",
@@ -18,8 +25,35 @@
               }
             ]
           }
+        ],
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": "attribute",
+            "style": "camelCase"
+          }
+        ],
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "style": "kebab-case"
+          }
+        ],
+        "import/extensions": "off",
+        "import/no-extraneous-dependencies": "off",
+        "prettier/prettier": [
+          "error",
+          {
+            "singleQuote": false,
+            "tabWith": 2
+          }
         ]
       }
+    },
+    {
+      "files": ["*.html"],
+      "extends": ["plugin:prettier/recommended"]
     },
     {
       "files": ["*.ts", "*.tsx"],
