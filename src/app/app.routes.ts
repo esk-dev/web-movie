@@ -1,3 +1,11 @@
 import { Route } from "@angular/router";
 
-export const appRoutes: Route[] = [];
+import { NxWelcomeComponent } from "./main/nx-welcome.component";
+
+export const appRoutes: Route[] = [
+  {
+    children: [],
+    component: NxWelcomeComponent,
+    path: "",
+  },
+];

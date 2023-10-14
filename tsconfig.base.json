@@ -17,7 +17,8 @@
     "paths": {
       "layout": ["libs/ui/layout/src/index.ts"],
       "login": ["libs/auth/login/src/index.ts"],
-      "root-store": ["libs/core/root-store/src/index.ts"]
+      "root-store": ["libs/core/root-store/src/index.ts"],
+      "utils": ["libs/utils/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -5,7 +5,7 @@ import {
   inject,
 } from "@angular/core";
 import { DevtoolsOptions, akitaDevtools } from "@datorama/akita";
-import { AkitaNgEffectsModule } from "@datorama/akita-ng-effects";
+import { provideEffectsManager } from "@ngneat/effects-ng";
 
 export function provideAkitaDevtools(options: Partial<DevtoolsOptions> = {}) {
   return {
@@ -20,7 +20,7 @@ export function provideAkitaDevtools(options: Partial<DevtoolsOptions> = {}) {
 }
 
 @NgModule({
-  imports: [AkitaNgEffectsModule.forRoot([])],
-  providers: [provideAkitaDevtools({ maxAge: 10 })],
+  imports: [],
+  providers: [provideEffectsManager(), provideAkitaDevtools({ maxAge: 10 })],
 })
 export class RootStoreModule {}

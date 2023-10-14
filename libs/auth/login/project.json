@@ -1,5 +1,5 @@
 {
-  "name": "login-component",
+  "name": "login",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "/src",
   "prefix": "lib",
@@ -10,7 +10,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "libs/auth/login-component/jest.config.ts",
+        "jestConfig": "libs/auth/login/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {
@@ -25,8 +25,8 @@
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
-          "libs/auth/login-component/**/*.ts",
-          "libs/auth/login-component/**/*.html"
+          "libs/auth/login/**/*.ts",
+          "libs/auth/login/**/*.html"
         ]
       }
     }

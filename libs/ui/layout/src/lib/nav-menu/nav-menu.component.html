@@ -1,0 +1,14 @@
+<nav class="flex flex-row justify-between my-auto">
+  <ng-container [ngSwitch]="breakpointObserver$ | async">
+    <ng-container *ngSwitchDefault>
+      <lib-nav-item
+        *ngFor="let navItem of navigationItems"
+        [navigationItem]="navItem"
+      >
+      </lib-nav-item>
+    </ng-container>
+    <ng-container *ngSwitchCase="breakpoints.XSmall"> </ng-container>
+
+    <ng-container *ngSwitchCase="breakpoints.Small"> </ng-container>
+  </ng-container>
+</nav>
