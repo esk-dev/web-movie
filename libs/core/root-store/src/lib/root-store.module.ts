@@ -3,9 +3,9 @@ import {
   NgModule,
   NgZone,
   inject,
-} from "@angular/core";
-import { DevtoolsOptions, akitaDevtools } from "@datorama/akita";
-import { provideEffectsManager } from "@ngneat/effects-ng";
+} from '@angular/core';
+import { DevtoolsOptions, akitaDevtools } from '@datorama/akita';
+import { provideEffectsManager } from '@ngneat/effects-ng';
 
 export function provideAkitaDevtools(options: Partial<DevtoolsOptions> = {}) {
   return {

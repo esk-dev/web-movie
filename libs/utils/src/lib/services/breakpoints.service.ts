@@ -1,8 +1,14 @@
-import { BreakpointObserver, BreakpointState } from "@angular/cdk/layout";
-import { Injectable } from "@angular/core";
-import { BehaviorSubject, distinctUntilChanged, map, share } from "rxjs";
+import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
+import { Injectable } from '@angular/core';
+import {
+  BehaviorSubject,
+  Observable,
+  distinctUntilChanged,
+  map,
+  share,
+} from 'rxjs';
 
-import { CustomBreakpoints } from "../constants/custom-breakpoints.enum";
+import { CustomBreakpoints } from '../constants/custom-breakpoints.enum';
 
 const LAYOUT_TYPES = [
   CustomBreakpoints.Large,
@@ -22,7 +28,7 @@ const LAYOUT_SHORT_TYPES_MAP: { [key: string]: string } = {
   [CustomBreakpoints.XSmall]: CustomBreakpoints.XSmall,
 };
 
-@Injectable({ providedIn: "root" })
+@Injectable({ providedIn: 'root' })
 export class BreakpointsService {
   private readonly layoutSubject$: BehaviorSubject<string> =
     new BehaviorSubject<string>(CustomBreakpoints.Medium);
@@ -31,7 +37,7 @@ export class BreakpointsService {
 
   constructor(private readonly breakpointObserver: BreakpointObserver) {}
 
-  get breakpointObserver$() {
+  get breakpointObserver$(): Observable<string> {
     return this.breakpointObserver.observe(LAYOUT_TYPES).pipe(
       map((result: BreakpointState) => {
         let type;
@@ -43,7 +49,7 @@ export class BreakpointsService {
         }
 
         this.layoutSubject$.next(type ?? CustomBreakpoints.Medium);
-        return type;
+        return type ?? CustomBreakpoints.Medium;
       }),
       distinctUntilChanged(),
       share()

@@ -1,14 +1,52 @@
 <nav class="flex flex-row justify-between my-auto">
-  <ng-container [ngSwitch]="breakpointObserver$ | async">
-    <ng-container *ngSwitchDefault>
+  <ng-container *ngLet="platformBreakpoint$ | async; let platformBreakpoint">
+    <ng-container
+      *ngIf="
+        platformBreakpoint === breakpoints.Medium ||
+          platformBreakpoint === breakpoints.Large ||
+          platformBreakpoint === breakpoints.XLarge ||
+          platformBreakpoint === breakpoints.X2Large;
+        else dropDownButton
+      "
+    >
       <lib-nav-item
         *ngFor="let navItem of navigationItems"
         [navigationItem]="navItem"
       >
       </lib-nav-item>
     </ng-container>
-    <ng-container *ngSwitchCase="breakpoints.XSmall"> </ng-container>
-
-    <ng-container *ngSwitchCase="breakpoints.Small"> </ng-container>
   </ng-container>
 </nav>
+
+<ng-template #dropDownButton>
+  <div class="relative">
+    <button [libDropdown]="dropdownContent">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-8 h-8"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+        />
+      </svg>
+    </button>
+    <ng-template #dropdownContent>
+      <div
+        class="absolute mt-2 flex flex-col gap-2 rounded-md bg-light-black px-4 py-2"
+      >
+        <div *ngFor="let navItem of navigationItems">
+          <lib-nav-item
+            (click)="dropDownState = false"
+            [navigationItem]="navItem"
+          ></lib-nav-item>
+        </div>
+      </div>
+    </ng-template>
+  </div>
+</ng-template>

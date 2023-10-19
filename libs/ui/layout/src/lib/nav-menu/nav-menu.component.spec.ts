@@ -1,8 +1,8 @@
-import { ComponentFixture, TestBed } from "@angular/core/testing";
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NavMenuComponent } from "./nav-menu.component";
+import { NavMenuComponent } from './nav-menu.component';
 
-describe("NavMenuComponent", () => {
+describe('NavMenuComponent', () => {
   let component: NavMenuComponent;
   let fixture: ComponentFixture<NavMenuComponent>;
 
@@ -16,7 +16,7 @@ describe("NavMenuComponent", () => {
     fixture.detectChanges();
   });
 
-  it("should create", () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 });

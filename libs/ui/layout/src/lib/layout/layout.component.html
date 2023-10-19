@@ -1,7 +1,7 @@
 <lib-header>
-  <lib-nav-menu class="md:col-span-4 lg:col-span-3"></lib-nav-menu>
+  <ng-content select="[header]"></ng-content>
+  <lib-nav-menu class="md:col-span-6 lg:col-span-3"></lib-nav-menu>
 </lib-header>
 <main class="w-full h-full">
-  <ng-content></ng-content>
+  <ng-content select="[main]"></ng-content>
 </main>
-<footer class="min-h-[60px] h-[5vh] w-full bg-gray"></footer>

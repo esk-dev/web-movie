@@ -15,10 +15,11 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "components": ["libs/ui/components/src/index.ts"],
       "layout": ["libs/ui/layout/src/index.ts"],
       "login": ["libs/auth/login/src/index.ts"],
       "root-store": ["libs/core/root-store/src/index.ts"],
-      "utils": ["libs/utils/index.ts"]
+      "utils": ["libs/utils/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -46,7 +46,7 @@
         "prettier/prettier": [
           "error",
           {
-            "singleQuote": false,
+            "singleQuote": true,
             "tabWith": 2
           }
         ]
