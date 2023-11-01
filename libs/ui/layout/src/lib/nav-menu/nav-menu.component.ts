@@ -4,7 +4,7 @@ import { DropdownDirective } from 'components';
 import { Observable } from 'rxjs';
 import { BreakpointsService, CustomBreakpoints, NgLetDirective } from 'utils';
 
-import { INavigationItem } from '../interfaces/navigation.interfaces';
+import { INavigationItem } from '../interfaces/navigation.interface';
 import { NavItemComponent } from './nav-item/nav-item.component';
 
 const navStub = [
@@ -14,11 +14,11 @@ const navStub = [
   },
   {
     pathName: 'Сериалы',
-    routerLink: '/',
+    routerLink: '/serials',
   },
   {
     pathName: 'Фильмы',
-    routerLink: '/',
+    routerLink: '/movies',
   },
 ];
 @Component({
@@ -31,8 +31,6 @@ const navStub = [
 })
 export class NavMenuComponent {
   readonly breakpoints = CustomBreakpoints;
-  public dropDownState = false;
-
   readonly navigationItems: INavigationItem[] = navStub;
   readonly platformBreakpoint$: Observable<string> =
     inject<BreakpointsService>(BreakpointsService).breakpointObserver$;

@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { INavigationItem } from '../../interfaces/navigation.interfaces';
+import { INavigationItem } from '../../interfaces/navigation.interface';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,

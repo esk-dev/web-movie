@@ -1,5 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+
+import { ISidebarItem } from '../interfaces/sidebar.interface';
 
 @Component({
   imports: [CommonModule],
@@ -8,4 +10,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./sidebar.component.scss'],
   templateUrl: './sidebar.component.html',
 })
-export class SidebarComponent {}
+export class SidebarComponent {
+  @Input()
+  readonly sidebarItems!: ISidebarItem[];
+}

@@ -1,7 +1,23 @@
 <lib-header>
-  <ng-content select="[header]"></ng-content>
-  <lib-nav-menu class="md:col-span-6 lg:col-span-3"></lib-nav-menu>
+  <lib-nav-menu class="col-start-1 lg:col-start-3"></lib-nav-menu>
 </lib-header>
-<main class="w-full h-full">
-  <ng-content select="[main]"></ng-content>
-</main>
+<ng-container *ngLet="platformBreakpoint$ | async; let platformBreakpoint">
+  <lib-sidebar
+    *ngIf="
+      platformBreakpoint === breakpoints.Large ||
+      platformBreakpoint === breakpoints.XLarge ||
+      platformBreakpoint === breakpoints.X2Large
+    "
+    class="fixed min-h-[450px] h-[80vh]"
+  ></lib-sidebar>
+  <main class="main-container w-full h-full">
+    <ng-content select="[main]"></ng-content>
+    <lib-dynamic-dock
+      *ngIf="
+        platformBreakpoint === breakpoints.Medium ||
+        platformBreakpoint === breakpoints.Small ||
+        platformBreakpoint === breakpoints.XSmall
+      "
+    ></lib-dynamic-dock>
+  </main>
+</ng-container>

@@ -1,4 +1,4 @@
-<nav class="flex flex-row justify-between my-auto">
+<nav class="flex flex-row justify-start my-auto gap-4">
   <ng-container *ngLet="platformBreakpoint$ | async; let platformBreakpoint">
     <ng-container
       *ngIf="
@@ -6,7 +6,7 @@
           platformBreakpoint === breakpoints.Large ||
           platformBreakpoint === breakpoints.XLarge ||
           platformBreakpoint === breakpoints.X2Large;
-        else dropDownButton
+        else dropdownButton
       "
     >
       <lib-nav-item
@@ -18,9 +18,9 @@
   </ng-container>
 </nav>
 
-<ng-template #dropDownButton>
+<ng-template #dropdownButton>
   <div class="relative">
-    <button [libDropdown]="dropdownContent">
+    <button class="rounded-md hover:bg-neutral" [libDropdown]="dropdownContent">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -38,13 +38,10 @@
     </button>
     <ng-template #dropdownContent>
       <div
-        class="absolute mt-2 flex flex-col gap-2 rounded-md bg-light-black px-4 py-2"
+        class="absolute flex flex-col gap-2 rounded-md bg-light-black px-4 py-2"
       >
         <div *ngFor="let navItem of navigationItems">
-          <lib-nav-item
-            (click)="dropDownState = false"
-            [navigationItem]="navItem"
-          ></lib-nav-item>
+          <lib-nav-item [navigationItem]="navItem"></lib-nav-item>
         </div>
       </div>
     </ng-template>

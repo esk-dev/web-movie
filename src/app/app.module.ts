@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PolymorpheusModule } from '@tinkoff/ng-polymorpheus';
 import { LayoutComponent, NavMenuComponent } from 'layout';
 import { RootStoreModule } from 'root-store';
@@ -16,6 +17,7 @@ import { NxWelcomeComponent } from './main/nx-welcome.component';
     CommonModule,
     BrowserModule,
     RootStoreModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     LayoutComponent,
     NxWelcomeComponent,

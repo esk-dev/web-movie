@@ -6,6 +6,7 @@ export const appRoutes: Route[] = [
   {
     children: [],
     component: NxWelcomeComponent,
+    outlet: 'main',
     path: '',
   },
 ];
