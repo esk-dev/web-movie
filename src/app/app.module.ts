@@ -4,11 +4,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PolymorpheusModule } from '@tinkoff/ng-polymorpheus';
 import { LayoutComponent, NavMenuComponent } from 'layout';
+import { NAVIGATION_PATHS, PATHS } from 'navigation';
 import { RootStoreModule } from 'root-store';
 
+import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './main/app.component';
-import { NxWelcomeComponent } from './main/nx-welcome.component';
+import { NxWelcomeComponent } from './nx-welcome.component';
 
 @NgModule({
   bootstrap: [AppComponent],
@@ -24,6 +25,11 @@ import { NxWelcomeComponent } from './main/nx-welcome.component';
     NavMenuComponent,
     PolymorpheusModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: PATHS,
+      useValue: NAVIGATION_PATHS,
+    },
+  ],
 })
 export class AppModule {}

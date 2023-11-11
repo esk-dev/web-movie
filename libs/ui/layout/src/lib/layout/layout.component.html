@@ -1,6 +1,3 @@
-<lib-header>
-  <lib-nav-menu class="col-start-1 lg:col-start-3"></lib-nav-menu>
-</lib-header>
 <ng-container *ngLet="platformBreakpoint$ | async; let platformBreakpoint">
   <lib-sidebar
     *ngIf="
@@ -8,7 +5,7 @@
       platformBreakpoint === breakpoints.XLarge ||
       platformBreakpoint === breakpoints.X2Large
     "
-    class="fixed min-h-[450px] h-[80vh]"
+    class="fixed min-h-[450px] h-[100vh]"
   ></lib-sidebar>
   <main class="main-container w-full h-full">
     <ng-content select="[main]"></ng-content>

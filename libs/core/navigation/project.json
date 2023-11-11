@@ -1,7 +1,7 @@
 {
-  "name": "utils",
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/utils/src",
+  "name": "navigation",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/core/navigation/src",
   "prefix": "lib",
   "tags": [],
   "projectType": "library",
@@ -10,14 +10,17 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "libs/utils/jest.config.ts"
+        "jestConfig": "libs/core/navigation/jest.config.ts"
       }
     },
     "lint": {
       "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/utils/**/*.ts", "libs/utils/**/*.html"]
+        "lintFilePatterns": [
+          "libs/core/navigation/**/*.ts",
+          "libs/core/navigation/**/*.html"
+        ]
       }
     }
   }

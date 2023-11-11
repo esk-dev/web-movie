@@ -1,0 +1,1027 @@
+{
+  "version": "6.0",
+  "nxVersion": "17.1.1",
+  "deps": {
+    "@angular/animations": "17.0.2",
+    "@angular/cdk": "17.0.0",
+    "@angular/common": "17.0.2",
+    "@angular/compiler": "17.0.2",
+    "@angular/core": "17.0.2",
+    "@angular/forms": "17.0.2",
+    "@angular/platform-browser": "17.0.2",
+    "@angular/platform-browser-dynamic": "17.0.2",
+    "@angular/router": "17.0.2",
+    "@datorama/akita": "^8.0.1",
+    "@datorama/akita-ng-router-store": "^8.0.0",
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "@ngneat/effects-ng": "^3.1.3",
+    "@nx/angular": "17.1.1",
+    "@tailwindcss/typography": "^0.5.10",
+    "@tinkoff/ng-polymorpheus": "^4.2.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "0.14.2",
+    "@angular-devkit/build-angular": "17.0.0",
+    "@angular-devkit/core": "17.0.0",
+    "@angular-devkit/schematics": "17.0.0",
+    "@angular-eslint/eslint-plugin": "17.0.1",
+    "@angular-eslint/eslint-plugin-template": "17.0.1",
+    "@angular-eslint/template-parser": "17.0.1",
+    "@angular/cli": "~17.0.0",
+    "@angular/compiler-cli": "17.0.2",
+    "@angular/language-service": "17.0.2",
+    "@nx/cypress": "17.1.1",
+    "@nx/eslint": "17.1.1",
+    "@nx/eslint-plugin": "17.1.1",
+    "@nx/jest": "17.1.1",
+    "@nx/js": "17.1.1",
+    "@nx/web": "17.1.1",
+    "@nx/workspace": "17.1.1",
+    "@rx-angular/eslint-plugin": "^1.0.0",
+    "@schematics/angular": "17.0.0",
+    "@types/jest": "^29.4.0",
+    "@types/node": "16.11.7",
+    "@typescript-eslint/eslint-plugin": "6.10.0",
+    "@typescript-eslint/parser": "6.10.0",
+    "@typescript-eslint/types": "^6.10.0",
+    "autoprefixer": "^10.4.0",
+    "commitizen": "^4.3.0",
+    "cypress": "^13.0.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "~8.46.0",
+    "eslint-config-airbnb-typescript": "^17.1.0",
+    "eslint-config-prettier": "9.0.0",
+    "eslint-plugin-cypress": "^2.13.4",
+    "eslint-plugin-perfectionist": "^2.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.0",
+    "jest": "^29.4.1",
+    "jest-environment-jsdom": "^29.4.1",
+    "jest-preset-angular": "13.1.3",
+    "jsonc-eslint-parser": "^2.1.0",
+    "lint-staged": "^14.0.1",
+    "nx": "17.1.1",
+    "postcss": "^8.4.5",
+    "prettier": "^2.6.2",
+    "prettier-eslint": "^15.0.1",
+    "tailwindcss": "^3.0.2",
+    "ts-jest": "^29.1.0",
+    "ts-node": "10.9.1",
+    "typescript": "5.2.2"
+  },
+  "pathMappings": {
+    "components": [
+      "libs/ui/components/src/index.ts"
+    ],
+    "layout": [
+      "libs/ui/layout/src/index.ts"
+    ],
+    "login": [
+      "libs/auth/login/src/index.ts"
+    ],
+    "menu": [
+      "libs/core/menu/src/index.ts"
+    ],
+    "navigation": [
+      "libs/core/navigation/src/index.ts"
+    ],
+    "root-store": [
+      "libs/core/root-store/src/index.ts"
+    ],
+    "utils": [
+      "libs/utils/src/index.ts"
+    ]
+  },
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "nonProjectFiles": [],
+    "projectFileMap": {
+      "layout": [
+        {
+          "file": "libs/ui/layout/.eslintrc.json",
+          "hash": "1321718814873601892"
+        },
+        {
+          "file": "libs/ui/layout/README.md",
+          "hash": "7639348883366159621"
+        },
+        {
+          "file": "libs/ui/layout/jest.config.ts",
+          "hash": "8261755692527449290"
+        },
+        {
+          "file": "libs/ui/layout/project.json",
+          "hash": "15484130531291918396"
+        },
+        {
+          "file": "libs/ui/layout/src/index.ts",
+          "hash": "7718758715072444343"
+        },
+        {
+          "file": "libs/ui/layout/src/lib/animations/animations.ts",
+          "hash": "16434181727258356628",
+          "deps": [
+            "npm:@angular/animations"
+          ]
+        },
+        {
+          "file": "libs/ui/layout/src/lib/dynamic-dock/dynamic-dock.component.html",
+          "hash": "13174813211567546708"
+        },
+        {
+          "file": "libs/ui/layout/src/lib/dynamic-dock/dynamic-dock.component.scss",
+          "hash": "15866112901650042413"
+        },
+        {
+          "file": "libs/ui/layout/src/lib/dynamic-dock/dynamic-dock.component.spec.ts",
+          "hash": "15196579205559769926",
+          "deps": [
+            "npm:@angular/core/testing"
+          ]
+        },
+        {
+          "file": "libs/ui/layout/src/lib/dynamic-dock/dynamic-dock.component.ts",
+          "hash": "3225436103831831025",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/ui/layout/src/lib/header/header.component.html",
+          "hash": "7054148332558738261"
+        },
+        {
+          "file": "libs/ui/layout/src/lib/header/header.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "libs/ui/layout/src/lib/header/header.component.spec.ts",
+          "hash": "12559701648387878601",
+          "deps": [
+            "npm:@angular/core/testing"
+          ]
+        },
+        {
+          "file": "libs/ui/layout/src/lib/header/header.component.ts",
+          "hash": "10094101322157768872",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/ui/layout/src/lib/interfaces/navigation.interface.ts",
+          "hash": "14314041322258229282"
+        },
+        {
+          "file": "libs/ui/layout/src/lib/interfaces/sidebar.interface.ts",
+          "hash": "1500889098074903682"
+        },
+        {
+          "file": "libs/ui/layout/src/lib/layout/layout.component.html",
+          "hash": "7625199055647753981"
+        },
+        {
+          "file": "libs/ui/layout/src/lib/layout/layout.component.scss",
+          "hash": "4968668083633791282"
+        },
+        {
+          "file": "libs/ui/layout/src/lib/layout/layout.component.spec.ts",
+          "hash": "11703824369928903315",
+          "deps": [
+            "npm:@angular/core/testing"
+          ]
+        },
+        {
+          "file": "libs/ui/layout/src/lib/layout/layout.component.ts",
+          "hash": "13840019109499571584",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:@angular/router",
+            "npm:rxjs",
+            "utils"
+          ]
+        },
+        {
+          "file": "libs/ui/layout/src/lib/nav-menu/nav-item/nav-item.component.html",
+          "hash": "15189384205326269085"
+        },
+        {
+          "file": "libs/ui/layout/src/lib/nav-menu/nav-item/nav-item.component.scss",
+          "hash": "13893183962357974170"
+        },
+        {
+          "file": "libs/ui/layout/src/lib/nav-menu/nav-item/nav-item.component.spec.ts",
+          "hash": "6546069477973401458",
+          "deps": [
+            "npm:@angular/core/testing"
+          ]
+        },
+        {
+          "file": "libs/ui/layout/src/lib/nav-menu/nav-item/nav-item.component.ts",
+          "hash": "17674748732690791764",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "libs/ui/layout/src/lib/nav-menu/nav-menu.component.html",
+          "hash": "8780621675308085508"
+        },
+        {
+          "file": "libs/ui/layout/src/lib/nav-menu/nav-menu.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "libs/ui/layout/src/lib/nav-menu/nav-menu.component.spec.ts",
+          "hash": "2571357287663646846",
+          "deps": [
+            "npm:@angular/core/testing"
+          ]
+        },
+        {
+          "file": "libs/ui/layout/src/lib/nav-menu/nav-menu.component.ts",
+          "hash": "7981956569957304129",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "components",
+            "npm:rxjs",
+            "utils"
+          ]
+        },
+        {
+          "file": "libs/ui/layout/src/lib/sidebar/sidebar.component.html",
+          "hash": "40952662613638336"
+        },
+        {
+          "file": "libs/ui/layout/src/lib/sidebar/sidebar.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "libs/ui/layout/src/lib/sidebar/sidebar.component.spec.ts",
+          "hash": "908818993137904647",
+          "deps": [
+            "npm:@angular/core/testing"
+          ]
+        },
+        {
+          "file": "libs/ui/layout/src/lib/sidebar/sidebar.component.ts",
+          "hash": "4115072368432257344",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/ui/layout/src/test-setup.ts",
+          "hash": "12935735732682149507",
+          "deps": [
+            "npm:jest-preset-angular/setup-jest"
+          ]
+        },
+        {
+          "file": "libs/ui/layout/tsconfig.json",
+          "hash": "8526453262384300416"
+        },
+        {
+          "file": "libs/ui/layout/tsconfig.lib.json",
+          "hash": "6020606002228403423"
+        },
+        {
+          "file": "libs/ui/layout/tsconfig.spec.json",
+          "hash": "7159729809249402441"
+        }
+      ],
+      "menu": [
+        {
+          "file": "libs/core/menu/.eslintrc.json",
+          "hash": "1321718814873601892"
+        },
+        {
+          "file": "libs/core/menu/README.md",
+          "hash": "5806655398900889409"
+        },
+        {
+          "file": "libs/core/menu/jest.config.ts",
+          "hash": "3046723500046181228"
+        },
+        {
+          "file": "libs/core/menu/project.json",
+          "hash": "1689969600191751389"
+        },
+        {
+          "file": "libs/core/menu/src/index.ts",
+          "hash": "12490561063807951300"
+        },
+        {
+          "file": "libs/core/menu/src/lib/common/menu.interface.ts",
+          "hash": "1689622162659541877",
+          "deps": [
+            "npm:@angular/core",
+            "navigation"
+          ]
+        },
+        {
+          "file": "libs/core/menu/src/lib/menu.module.ts",
+          "hash": "2187587523835054248",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/core/menu/src/test-setup.ts",
+          "hash": "12935735732682149507",
+          "deps": [
+            "npm:jest-preset-angular/setup-jest"
+          ]
+        },
+        {
+          "file": "libs/core/menu/tsconfig.json",
+          "hash": "8526453262384300416"
+        },
+        {
+          "file": "libs/core/menu/tsconfig.lib.json",
+          "hash": "6020606002228403423"
+        },
+        {
+          "file": "libs/core/menu/tsconfig.spec.json",
+          "hash": "7159729809249402441"
+        }
+      ],
+      "login": [
+        {
+          "file": "libs/auth/login/.eslintrc.json",
+          "hash": "1321718814873601892"
+        },
+        {
+          "file": "libs/auth/login/README.md",
+          "hash": "13452521902387023722"
+        },
+        {
+          "file": "libs/auth/login/jest.config.ts",
+          "hash": "5545405396065124082"
+        },
+        {
+          "file": "libs/auth/login/project.json",
+          "hash": "7406333887876775940"
+        },
+        {
+          "file": "libs/auth/login/src/index.ts",
+          "hash": "14891541896484602990"
+        },
+        {
+          "file": "libs/auth/login/src/lib/login/login.component.html",
+          "hash": "17790923370023944326"
+        },
+        {
+          "file": "libs/auth/login/src/lib/login/login.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "libs/auth/login/src/lib/login/login.component.spec.ts",
+          "hash": "16368066416186865459",
+          "deps": [
+            "npm:@angular/core/testing"
+          ]
+        },
+        {
+          "file": "libs/auth/login/src/lib/login/login.component.ts",
+          "hash": "7917662308108439997",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/auth/login/src/test-setup.ts",
+          "hash": "12935735732682149507",
+          "deps": [
+            "npm:jest-preset-angular/setup-jest"
+          ]
+        },
+        {
+          "file": "libs/auth/login/tsconfig.json",
+          "hash": "8526453262384300416"
+        },
+        {
+          "file": "libs/auth/login/tsconfig.lib.json",
+          "hash": "6020606002228403423"
+        },
+        {
+          "file": "libs/auth/login/tsconfig.spec.json",
+          "hash": "7159729809249402441"
+        }
+      ],
+      "e2e": [
+        {
+          "file": "e2e/.eslintrc.json",
+          "hash": "3091309458834660434"
+        },
+        {
+          "file": "e2e/cypress.config.ts",
+          "hash": "13356768158862517355",
+          "deps": [
+            "npm:@nx/cypress/plugins/cypress-preset",
+            "npm:cypress"
+          ]
+        },
+        {
+          "file": "e2e/project.json",
+          "hash": "10465907827459747781"
+        },
+        {
+          "file": "e2e/src/e2e/app.cy.ts",
+          "hash": "8795138649093748302"
+        },
+        {
+          "file": "e2e/src/fixtures/example.json",
+          "hash": "11614668686582597233"
+        },
+        {
+          "file": "e2e/src/support/app.po.ts",
+          "hash": "11157016311132186162"
+        },
+        {
+          "file": "e2e/src/support/commands.ts",
+          "hash": "6246175792620121319"
+        },
+        {
+          "file": "e2e/src/support/e2e.ts",
+          "hash": "3666078656922506009"
+        },
+        {
+          "file": "e2e/tsconfig.json",
+          "hash": "610573536103898102"
+        }
+      ],
+      "components": [
+        {
+          "file": "libs/ui/components/.eslintrc.json",
+          "hash": "1321718814873601892"
+        },
+        {
+          "file": "libs/ui/components/README.md",
+          "hash": "7412660979460992397"
+        },
+        {
+          "file": "libs/ui/components/jest.config.ts",
+          "hash": "1156397112119108783"
+        },
+        {
+          "file": "libs/ui/components/project.json",
+          "hash": "16529696814590035636"
+        },
+        {
+          "file": "libs/ui/components/src/index.ts",
+          "hash": "17123084492782540059"
+        },
+        {
+          "file": "libs/ui/components/src/lib/components.module.ts",
+          "hash": "10028987847835253552",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/ui/components/src/lib/dropdown/dropdown-component/dropdown.component.html",
+          "hash": "11602891570314898927"
+        },
+        {
+          "file": "libs/ui/components/src/lib/dropdown/dropdown-component/dropdown.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "libs/ui/components/src/lib/dropdown/dropdown-component/dropdown.component.spec.ts",
+          "hash": "7905656108838623024",
+          "deps": [
+            "npm:@angular/core/testing"
+          ]
+        },
+        {
+          "file": "libs/ui/components/src/lib/dropdown/dropdown-component/dropdown.component.ts",
+          "hash": "12072870871908748384",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/ui/components/src/lib/dropdown/dropdown-state.service.ts",
+          "hash": "9675258392788773769",
+          "deps": [
+            "npm:@angular/core",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/ui/components/src/lib/dropdown/dropdown.directive.ts",
+          "hash": "10613479624241971280",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/ui/components/src/lib/dropdown/dropdown.providers.ts",
+          "hash": "11600358882804148328",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/ui/components/src/test-setup.ts",
+          "hash": "12935735732682149507",
+          "deps": [
+            "npm:jest-preset-angular/setup-jest"
+          ]
+        },
+        {
+          "file": "libs/ui/components/tsconfig.json",
+          "hash": "8526453262384300416"
+        },
+        {
+          "file": "libs/ui/components/tsconfig.lib.json",
+          "hash": "6020606002228403423"
+        },
+        {
+          "file": "libs/ui/components/tsconfig.spec.json",
+          "hash": "7159729809249402441"
+        }
+      ],
+      "web-movies": [
+        {
+          "file": ".eslintignore",
+          "hash": "7663861978715868291"
+        },
+        {
+          "file": ".eslintrc.base.json",
+          "hash": "7787666139592639106"
+        },
+        {
+          "file": ".eslintrc.json",
+          "hash": "12939447549835612966"
+        },
+        {
+          "file": ".gitignore",
+          "hash": "13021165157697951435"
+        },
+        {
+          "file": ".husky/pre-commit",
+          "hash": "1679120426366045763"
+        },
+        {
+          "file": ".husky/prepare-commit-msg",
+          "hash": "15237252797095893460"
+        },
+        {
+          "file": ".prettierignore",
+          "hash": "5500754160472083378"
+        },
+        {
+          "file": ".prettierrc",
+          "hash": "9606403138835791841"
+        },
+        {
+          "file": ".vscode/extensions.json",
+          "hash": "235626400633494639"
+        },
+        {
+          "file": "README.md",
+          "hash": "17224592711052229150"
+        },
+        {
+          "file": "jest.config.app.ts",
+          "hash": "16984495501752665870"
+        },
+        {
+          "file": "jest.config.ts",
+          "hash": "12333515226966617182",
+          "deps": [
+            "npm:@nx/jest"
+          ]
+        },
+        {
+          "file": "jest.preset.js",
+          "hash": "9430166341120122740",
+          "deps": [
+            "npm:@nx/jest/preset"
+          ]
+        },
+        {
+          "file": "lint-staged.config.js",
+          "hash": "1967279342575660361"
+        },
+        {
+          "file": "nx.json",
+          "hash": "3738526958515510556"
+        },
+        {
+          "file": "package-lock.json",
+          "hash": "13586374696113480717"
+        },
+        {
+          "file": "package.json",
+          "hash": "10342459690736412361",
+          "deps": [
+            "npm:@angular/animations",
+            "npm:@angular/cdk",
+            "npm:@angular/common",
+            "npm:@angular/compiler",
+            "npm:@angular/core",
+            "npm:@angular/forms",
+            "npm:@angular/platform-browser",
+            "npm:@angular/platform-browser-dynamic",
+            "npm:@angular/router",
+            "npm:@datorama/akita",
+            "npm:@datorama/akita-ng-router-store",
+            "npm:@fortawesome/fontawesome-svg-core",
+            "npm:@fortawesome/free-solid-svg-icons",
+            "npm:@ngneat/effects-ng",
+            "npm:@nx/angular",
+            "npm:@tailwindcss/typography",
+            "npm:@tinkoff/ng-polymorpheus",
+            "npm:rxjs",
+            "npm:tslib",
+            "npm:zone.js",
+            "npm:@angular-devkit/build-angular",
+            "npm:@angular-devkit/core",
+            "npm:@angular-devkit/schematics",
+            "npm:@angular-eslint/eslint-plugin",
+            "npm:@angular-eslint/eslint-plugin-template",
+            "npm:@angular-eslint/template-parser",
+            "npm:@angular/cli",
+            "npm:@angular/compiler-cli",
+            "npm:@angular/language-service",
+            "npm:@nx/cypress",
+            "npm:@nx/eslint",
+            "npm:@nx/eslint-plugin",
+            "npm:@nx/jest",
+            "npm:@nx/js",
+            "npm:@nx/web",
+            "npm:@nx/workspace",
+            "npm:@rx-angular/eslint-plugin",
+            "npm:@schematics/angular",
+            "npm:@types/jest",
+            "npm:@types/node",
+            "npm:@typescript-eslint/eslint-plugin",
+            "npm:@typescript-eslint/parser",
+            "npm:@typescript-eslint/types",
+            "npm:autoprefixer",
+            "npm:commitizen",
+            "npm:cypress",
+            "npm:cz-conventional-changelog",
+            "npm:eslint",
+            "npm:eslint-config-airbnb-typescript",
+            "npm:eslint-config-prettier",
+            "npm:eslint-plugin-cypress",
+            "npm:eslint-plugin-perfectionist",
+            "npm:eslint-plugin-prettier",
+            "npm:husky",
+            "npm:jest",
+            "npm:jest-environment-jsdom",
+            "npm:jest-preset-angular",
+            "npm:jsonc-eslint-parser",
+            "npm:lint-staged",
+            "npm:nx",
+            "npm:postcss",
+            "npm:prettier",
+            "npm:prettier-eslint",
+            "npm:tailwindcss",
+            "npm:ts-jest",
+            "npm:ts-node",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "project.json",
+          "hash": "2167693565846234542"
+        },
+        {
+          "file": "src/app/app-routing.module.ts",
+          "hash": "13199665292900175706",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "src/app/app.component.ts",
+          "hash": "14047889167310819326",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:@angular/router",
+            "layout"
+          ]
+        },
+        {
+          "file": "src/app/app.config.ts",
+          "hash": "4461804630018820599",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "src/app/app.module.ts",
+          "hash": "6302821264805737769",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:@angular/platform-browser",
+            "npm:@tinkoff/ng-polymorpheus",
+            "layout",
+            "navigation",
+            "root-store"
+          ]
+        },
+        {
+          "file": "src/app/app.routes.ts",
+          "hash": "15193012049068497163",
+          "deps": [
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "src/app/nx-welcome.component.ts",
+          "hash": "12334704634051837465",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/favicon.ico",
+          "hash": "9303420814833116677"
+        },
+        {
+          "file": "src/index.html",
+          "hash": "12122372073528479649"
+        },
+        {
+          "file": "src/main.ts",
+          "hash": "5582758358073665340",
+          "deps": [
+            "npm:@angular/platform-browser"
+          ]
+        },
+        {
+          "file": "src/test-setup.ts",
+          "hash": "12935735732682149507",
+          "deps": [
+            "npm:jest-preset-angular/setup-jest"
+          ]
+        },
+        {
+          "file": "styles.scss",
+          "hash": "9774830016022278896"
+        },
+        {
+          "file": "stylesheets/themes.scss",
+          "hash": "5578765688226585549"
+        },
+        {
+          "file": "tailwind.config.js",
+          "hash": "383170698041908266",
+          "deps": [
+            "npm:@nx/angular/tailwind",
+            "npm:path",
+            "npm:@tailwindcss/typography"
+          ]
+        },
+        {
+          "file": "tsconfig.app.json",
+          "hash": "16616923596177837167"
+        },
+        {
+          "file": "tsconfig.base.json",
+          "hash": "14376796085227239921"
+        },
+        {
+          "file": "tsconfig.editor.json",
+          "hash": "17511610827034788226"
+        },
+        {
+          "file": "tsconfig.json",
+          "hash": "5788674449168120060"
+        },
+        {
+          "file": "tsconfig.spec.json",
+          "hash": "16287279946930924495"
+        }
+      ],
+      "root-store": [
+        {
+          "file": "libs/core/root-store/.eslintrc.json",
+          "hash": "1321718814873601892"
+        },
+        {
+          "file": "libs/core/root-store/README.md",
+          "hash": "9364757918445139420"
+        },
+        {
+          "file": "libs/core/root-store/jest.config.ts",
+          "hash": "14936320274527339595"
+        },
+        {
+          "file": "libs/core/root-store/project.json",
+          "hash": "9598851972015179727"
+        },
+        {
+          "file": "libs/core/root-store/src/index.ts",
+          "hash": "13864274691143967312"
+        },
+        {
+          "file": "libs/core/root-store/src/lib/root-store.module.ts",
+          "hash": "16575283895733524942",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@datorama/akita",
+            "npm:@ngneat/effects-ng"
+          ]
+        },
+        {
+          "file": "libs/core/root-store/src/test-setup.ts",
+          "hash": "12935735732682149507",
+          "deps": [
+            "npm:jest-preset-angular/setup-jest"
+          ]
+        },
+        {
+          "file": "libs/core/root-store/tsconfig.json",
+          "hash": "8526453262384300416"
+        },
+        {
+          "file": "libs/core/root-store/tsconfig.lib.json",
+          "hash": "6020606002228403423"
+        },
+        {
+          "file": "libs/core/root-store/tsconfig.spec.json",
+          "hash": "7159729809249402441"
+        }
+      ],
+      "navigation": [
+        {
+          "file": "libs/core/navigation/.eslintrc.json",
+          "hash": "1321718814873601892"
+        },
+        {
+          "file": "libs/core/navigation/README.md",
+          "hash": "2645806017984463852"
+        },
+        {
+          "file": "libs/core/navigation/jest.config.ts",
+          "hash": "6696942013652831332"
+        },
+        {
+          "file": "libs/core/navigation/project.json",
+          "hash": "5125140873131048998"
+        },
+        {
+          "file": "libs/core/navigation/src/index.ts",
+          "hash": "17147229344664868113"
+        },
+        {
+          "file": "libs/core/navigation/src/lib/common/navigation.interface.ts",
+          "hash": "2402557608986160840",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/core/navigation/src/lib/navigation.module.ts",
+          "hash": "17926097242810638359",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/core/navigation/src/lib/service/navigation.service.spec.ts",
+          "hash": "6600783273257543555",
+          "deps": [
+            "npm:@angular/core/testing"
+          ]
+        },
+        {
+          "file": "libs/core/navigation/src/lib/service/navigation.service.ts",
+          "hash": "1742122190666433449",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/core/navigation/src/test-setup.ts",
+          "hash": "12935735732682149507",
+          "deps": [
+            "npm:jest-preset-angular/setup-jest"
+          ]
+        },
+        {
+          "file": "libs/core/navigation/tsconfig.json",
+          "hash": "8526453262384300416"
+        },
+        {
+          "file": "libs/core/navigation/tsconfig.lib.json",
+          "hash": "6020606002228403423"
+        },
+        {
+          "file": "libs/core/navigation/tsconfig.spec.json",
+          "hash": "7159729809249402441"
+        }
+      ],
+      "utils": [
+        {
+          "file": "libs/utils/.eslintrc.json",
+          "hash": "2077898431759117767"
+        },
+        {
+          "file": "libs/utils/README.md",
+          "hash": "7928633615893668067"
+        },
+        {
+          "file": "libs/utils/jest.config.ts",
+          "hash": "3753954080087169714"
+        },
+        {
+          "file": "libs/utils/project.json",
+          "hash": "10656946507225510527"
+        },
+        {
+          "file": "libs/utils/src/index.ts",
+          "hash": "6832413855376186089"
+        },
+        {
+          "file": "libs/utils/src/lib/abstract/portal-host.directive.ts",
+          "hash": "5870149470637581115",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/utils/src/lib/constants/custom-breakpoints.enum.ts",
+          "hash": "578190095007696658"
+        },
+        {
+          "file": "libs/utils/src/lib/directives/ng-let.directive.spec.ts",
+          "hash": "4348925616692947768"
+        },
+        {
+          "file": "libs/utils/src/lib/directives/ng-let.directive.ts",
+          "hash": "9478111546506721355",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/utils/src/lib/services/breakpoints.service.ts",
+          "hash": "1578382070105155369",
+          "deps": [
+            "npm:@angular/cdk/layout",
+            "npm:@angular/core",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/utils/src/lib/utils.module.ts",
+          "hash": "12447798877451216861",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/utils/src/test-setup.ts",
+          "hash": "12935735732682149507",
+          "deps": [
+            "npm:jest-preset-angular/setup-jest"
+          ]
+        },
+        {
+          "file": "libs/utils/tsconfig.json",
+          "hash": "15487755565970508470"
+        },
+        {
+          "file": "libs/utils/tsconfig.lib.json",
+          "hash": "5796668385415907511"
+        },
+        {
+          "file": "libs/utils/tsconfig.spec.json",
+          "hash": "2927375835638640771"
+        }
+      ]
+    }
+  }
+}

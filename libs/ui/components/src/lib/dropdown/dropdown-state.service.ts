@@ -1,4 +1,4 @@
-import { Injectable, Input, Output } from '@angular/core';
+import { Injectable, Input } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
 import { DropdownDirective } from './dropdown.directive';
@@ -9,7 +9,6 @@ import { DropdownDirective } from './dropdown.directive';
 export class DropdownStateService {
   dropdownDirective!: DropdownDirective | undefined;
 
-  @Output()
   readonly dropdownStateChange: BehaviorSubject<boolean> =
     new BehaviorSubject<boolean>(false);
 

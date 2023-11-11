@@ -92,7 +92,6 @@ import { Component, ViewEncapsulation } from '@angular/core';
         width: 100%;
       }
       #welcome {
-        margin-top: 2.5rem;
       }
       #welcome h1 {
         font-size: 3rem;
@@ -781,9 +780,9 @@ import { Component, ViewEncapsulation } from '@angular/core';
               Add UI library
             </summary>
             <pre><span># Generate UI lib</span>
-nx g @nx/angular:lib ui
+nx g &#64;nx/angular:lib ui
 <span># Add a component</span>
-nx g @nx/angular:component button --project ui</pre>
+nx g &#64;nx/angular:component button --project ui</pre>
           </details>
           <details>
             <summary>
