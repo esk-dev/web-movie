@@ -1,14 +1,13 @@
 import { CommonModule } from '@angular/common';
+import { DropdownDirective } from '../dropdown.directive';
+import { DropdownStateService } from '../dropdown-state.service';
 import {
-  ChangeDetectionStrategy,
+  Inject,
   Component,
   ElementRef,
   HostListener,
-  Inject,
+  ChangeDetectionStrategy,
 } from '@angular/core';
-
-import { DropdownDirective } from '../dropdown.directive';
-import { DropdownStateService } from '../dropdown-state.service';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,

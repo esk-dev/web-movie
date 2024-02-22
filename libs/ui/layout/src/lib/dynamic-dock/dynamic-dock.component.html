@@ -1,4 +1,4 @@
-<div [@openClose]="animationTrigger" class="dynamic-island-container">
+<div [@openClose]="visibleState$ | async" class="dynamic-island-container">
   <div class="dynamic-island-divider" (click)="toggle()"></div>
   <div *ngIf="show$ | async" class="dynamic-island">
     <ng-content></ng-content>

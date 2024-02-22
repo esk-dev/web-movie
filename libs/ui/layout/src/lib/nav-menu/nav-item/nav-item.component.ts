@@ -1,17 +1,19 @@
+import { IMenuLink } from 'menu';
+import { ButtonDirective } from 'components';
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
-
-import { INavigationItem } from '../../interfaces/navigation.interface';
+import { Input, Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, ButtonDirective],
   selector: 'lib-nav-item',
   standalone: true,
   styleUrls: ['./nav-item.component.scss'],
   templateUrl: './nav-item.component.html',
 })
 export class NavItemComponent {
-  @Input() public navigationItem!: INavigationItem;
+  @Input() public iconState = false;
+  @Input() public labelWithIcon = false;
+  @Input() public menuItem!: IMenuLink;
 }

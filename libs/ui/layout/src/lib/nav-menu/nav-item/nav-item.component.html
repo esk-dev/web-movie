@@ -1,6 +1,7 @@
-<a
-  class="block px-4 py-2 text-light-gray hover:text-white hover:bg-neutral active:bg-neutral-focus cursor-pointer rounded-md"
-  [routerLink]="[navigationItem.routerLink]"
-  routerLinkActive="active"
-  >{{ navigationItem.pathName }}</a
->
+<a libButton neutral [routerLink]="[menuItem.route]" routerLinkActive="active">
+  @if (iconState) {
+  <i [class]="menuItem.icon"></i>
+  } @else {
+  {{ menuItem.label }}
+  }
+</a>

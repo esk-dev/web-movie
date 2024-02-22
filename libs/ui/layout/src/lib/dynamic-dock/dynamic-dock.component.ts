@@ -1,16 +1,15 @@
 import { CommonModule } from '@angular/common';
+import { openCloseAnimation } from '../animations/animations';
+import { tap, Subject, takeUntil, BehaviorSubject } from 'rxjs';
 import {
-  ChangeDetectionStrategy,
+  Inject,
+  OnInit,
   Component,
+  OnDestroy,
   ElementRef,
   HostListener,
-  Inject,
-  OnDestroy,
-  OnInit,
+  ChangeDetectionStrategy,
 } from '@angular/core';
-import { BehaviorSubject, Subject, takeUntil, tap } from 'rxjs';
-
-import { openCloseAnimation } from '../animations/animations';
 
 @Component({
   animations: [openCloseAnimation],
@@ -24,13 +23,13 @@ import { openCloseAnimation } from '../animations/animations';
 export class DynamicDockComponent implements OnInit, OnDestroy {
   private destroy$: Subject<boolean> = new Subject<boolean>();
 
-  private isExpand: BehaviorSubject<boolean> = new BehaviorSubject(false);
+  private isExpand$: BehaviorSubject<boolean> = new BehaviorSubject(false);
 
-  private visibleState$: BehaviorSubject<string> = new BehaviorSubject('close');
-
-  public expanded$ = this.isExpand.asObservable();
+  public expanded$ = this.isExpand$.asObservable();
 
   public show$: BehaviorSubject<boolean> = new BehaviorSubject(false);
+
+  public visibleState$: BehaviorSubject<string> = new BehaviorSubject('close');
 
   constructor(@Inject(ElementRef) readonly elementRef: ElementRef) {}
 
@@ -63,15 +62,14 @@ export class DynamicDockComponent implements OnInit, OnDestroy {
   onClick(event: Event) {
     if (
       !this.elementRef.nativeElement.contains(event.target) &&
-      this.isExpand.value
+      this.isExpand$.value
     ) {
-      console.log('work');
-      this.isExpand.next(false);
+      this.isExpand$.next(false);
     }
   }
 
   public toggle(): void {
-    this.isExpand.next(!this.isExpand.getValue());
+    this.isExpand$.next(!this.isExpand$.getValue());
   }
 
   get animationTrigger(): string {

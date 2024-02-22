@@ -13,7 +13,26 @@
         "plugin:@angular-eslint/template/process-inline-templates"
       ],
       "rules": {
+        "perfectionist/sort-imports": [
+          "error",
+          {
+            "type": "line-length",
+            "order": "asc"
+          }
+        ],
+        "perfectionist/sort-named-imports": [
+          "error",
+          {
+            "type": "line-length",
+            "order": "asc"
+          }
+        ],
+        "perfectionist/sort-objects": "off",
         "@rx-angular/no-explicit-change-detection-apis": "off",
+        "@rx-angular/no-rxstate-subscriptions-outside-constructor": [
+          "error",
+          { "allowedMethods": ["ngOnInit"] }
+        ],
         "@nx/enforce-module-boundaries": [
           "error",
           {

@@ -1,14 +1,13 @@
-import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 import { Injectable } from '@angular/core';
+import { CustomBreakpoints } from '../constants/custom-breakpoints.enum';
+import { BreakpointState, BreakpointObserver } from '@angular/cdk/layout';
 import {
-  BehaviorSubject,
-  Observable,
-  distinctUntilChanged,
   map,
   share,
+  Observable,
+  BehaviorSubject,
+  distinctUntilChanged,
 } from 'rxjs';
-
-import { CustomBreakpoints } from '../constants/custom-breakpoints.enum';
 
 const LAYOUT_TYPES = [
   CustomBreakpoints.Large,

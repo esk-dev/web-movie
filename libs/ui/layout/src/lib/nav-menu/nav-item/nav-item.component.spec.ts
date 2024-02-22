@@ -1,6 +1,5 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { NavItemComponent } from './nav-item.component';
+import { TestBed, ComponentFixture } from '@angular/core/testing';
 
 describe('NavItemComponent', () => {
   let component: NavItemComponent;

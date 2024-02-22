@@ -1,9 +1,10 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { NavMenuComponent } from '../nav-menu/nav-menu.component';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [CommonModule],
+  imports: [CommonModule, NavMenuComponent],
   selector: 'lib-header',
   standalone: true,
   styleUrls: ['./header.component.scss'],

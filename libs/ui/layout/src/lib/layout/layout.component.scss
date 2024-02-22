@@ -1,4 +1,8 @@
+:host {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
 .main-container {
-  max-width: 1440px;
   margin: 0 auto;
 }

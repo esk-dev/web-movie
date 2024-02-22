@@ -1,20 +1,9 @@
-<ng-container *ngLet="platformBreakpoint$ | async; let platformBreakpoint">
-  <lib-sidebar
-    *ngIf="
-      platformBreakpoint === breakpoints.Large ||
-      platformBreakpoint === breakpoints.XLarge ||
-      platformBreakpoint === breakpoints.X2Large
-    "
-    class="fixed min-h-[450px] h-[100vh]"
-  ></lib-sidebar>
-  <main class="main-container w-full h-full">
-    <ng-content select="[main]"></ng-content>
-    <lib-dynamic-dock
-      *ngIf="
-        platformBreakpoint === breakpoints.Medium ||
-        platformBreakpoint === breakpoints.Small ||
-        platformBreakpoint === breakpoints.XSmall
-      "
-    ></lib-dynamic-dock>
-  </main>
-</ng-container>
+<!--@if ((isMobile$ | async) === false) {-->
+<lib-sidebar class="sticky top-0 min-h-[450px] h-[100vh]"></lib-sidebar>
+<!--}-->
+<main class="main-container w-full min-h-[100vh] px-3 py-4">
+  <ng-content></ng-content>
+  @if (isMobile$ | async) {
+  <lib-dynamic-dock></lib-dynamic-dock>
+  }
+</main>

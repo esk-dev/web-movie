@@ -1,6 +1,5 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { DynamicDockComponent } from './dynamic-dock.component';
+import { TestBed, ComponentFixture } from '@angular/core/testing';
 
 describe('DynamicDockComponent', () => {
   let component: DynamicDockComponent;

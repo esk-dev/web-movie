@@ -1,9 +1,9 @@
 import {
-  animate,
   state,
   style,
-  transition,
+  animate,
   trigger,
+  transition,
 } from '@angular/animations';
 
 export const openCloseAnimation = trigger('openClose', [

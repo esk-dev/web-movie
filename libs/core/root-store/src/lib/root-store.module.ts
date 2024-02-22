@@ -1,11 +1,11 @@
+import { provideEffectsManager } from '@ngneat/effects-ng';
+import { akitaDevtools, DevtoolsOptions } from '@datorama/akita';
 import {
-  ENVIRONMENT_INITIALIZER,
-  NgModule,
   NgZone,
   inject,
+  NgModule,
+  ENVIRONMENT_INITIALIZER,
 } from '@angular/core';
-import { DevtoolsOptions, akitaDevtools } from '@datorama/akita';
-import { provideEffectsManager } from '@ngneat/effects-ng';
 
 export function provideAkitaDevtools(options: Partial<DevtoolsOptions> = {}) {
   return {

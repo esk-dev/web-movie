@@ -1,26 +1,17 @@
-import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { DropdownDirective } from 'components';
 import { Observable } from 'rxjs';
-import { BreakpointsService, CustomBreakpoints, NgLetDirective } from 'utils';
-
-import { INavigationItem } from '../interfaces/navigation.interface';
+import { CommonModule } from '@angular/common';
+import { DropdownDirective } from 'components';
+import { MENU, IMenuLink, MenuService } from 'menu';
 import { NavItemComponent } from './nav-item/nav-item.component';
+import { NgLetDirective, CustomBreakpoints, BreakpointsService } from 'utils';
+import {
+  Inject,
+  OnInit,
+  inject,
+  Component,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 
-const navStub = [
-  {
-    pathName: 'Главная',
-    routerLink: '/',
-  },
-  {
-    pathName: 'Сериалы',
-    routerLink: '/serials',
-  },
-  {
-    pathName: 'Фильмы',
-    routerLink: '/movies',
-  },
-];
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [CommonModule, NavItemComponent, NgLetDirective, DropdownDirective],
@@ -31,7 +22,6 @@ const navStub = [
 })
 export class NavMenuComponent {
   readonly breakpoints = CustomBreakpoints;
-  readonly navigationItems: INavigationItem[] = navStub;
   readonly platformBreakpoint$: Observable<string> =
     inject<BreakpointsService>(BreakpointsService).breakpointObserver$;
 }

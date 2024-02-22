@@ -1,20 +1,19 @@
+import { UI_DROPDOWN_COMPONENT } from './dropdown.providers';
+import { DropdownStateService } from './dropdown-state.service';
+import { DropdownComponent } from './dropdown-component/dropdown.component';
 import {
-  ComponentRef,
-  Directive,
-  ElementRef,
-  HostListener,
+  Type,
+  Input,
   Inject,
   Injector,
-  Input,
+  Directive,
   OnDestroy,
+  ElementRef,
   TemplateRef,
-  Type,
+  ComponentRef,
+  HostListener,
   ViewContainerRef,
 } from '@angular/core';
-
-import { UI_DROPDOWN_COMPONENT } from './dropdown.providers';
-import { DropdownComponent } from './dropdown-component/dropdown.component';
-import { DropdownStateService } from './dropdown-state.service';
 
 @Directive({
   exportAs: 'libDropdown',

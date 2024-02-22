@@ -1,5 +1,10 @@
+/* eslint-disable perfectionist/sort-interfaces */
 /* Описваются все пути для удобства подстановки */
-import { InjectionToken } from '@angular/core';
+import {
+  InjectionToken,
+  EnvironmentProviders,
+  makeEnvironmentProviders,
+} from '@angular/core';
 
 /* Дженерик для списка параметров */
 export interface INavigationLink {
@@ -9,25 +14,33 @@ export interface INavigationLink {
 }
 
 export interface INavigationPaths {
-  home: string;
-
   // Main page
   main: string;
-
+  search: string;
   // User page
   user: string;
-
   // Watching page
   watch: string;
 }
 
 export const NAVIGATION_PATHS: INavigationPaths = {
-  home: '',
-  main: '/main',
-  user: '/user',
-  watch: '/watch',
+  main: 'main',
+  search: 'search',
+  user: 'user',
+  watch: 'watch',
 };
 
 export const PATHS = new InjectionToken<Record<string, unknown>>(
   'NavigationPaths'
 );
+
+export function provideNavigationPaths(
+  navigationPath: INavigationPaths
+): EnvironmentProviders {
+  return makeEnvironmentProviders([
+    {
+      provide: PATHS,
+      useValue: navigationPath,
+    },
+  ]);
+}
