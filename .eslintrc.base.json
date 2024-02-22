@@ -5,7 +5,34 @@
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "extends": [
+        "plugin:@nx/angular",
+        "plugin:prettier/recommended",
+        "plugin:@rx-angular/recommended",
+        "plugin:perfectionist/recommended-natural",
+        "plugin:@angular-eslint/template/process-inline-templates"
+      ],
       "rules": {
+        "perfectionist/sort-imports": [
+          "error",
+          {
+            "type": "line-length",
+            "order": "asc"
+          }
+        ],
+        "perfectionist/sort-named-imports": [
+          "error",
+          {
+            "type": "line-length",
+            "order": "asc"
+          }
+        ],
+        "perfectionist/sort-objects": "off",
+        "@rx-angular/no-explicit-change-detection-apis": "off",
+        "@rx-angular/no-rxstate-subscriptions-outside-constructor": [
+          "error",
+          { "allowedMethods": ["ngOnInit"] }
+        ],
         "@nx/enforce-module-boundaries": [
           "error",
           {
@@ -18,8 +45,35 @@
               }
             ]
           }
+        ],
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": "attribute",
+            "style": "camelCase"
+          }
+        ],
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "style": "kebab-case"
+          }
+        ],
+        "import/extensions": "off",
+        "import/no-extraneous-dependencies": "off",
+        "prettier/prettier": [
+          "error",
+          {
+            "singleQuote": true,
+            "tabWith": 2
+          }
         ]
       }
+    },
+    {
+      "files": ["*.html"],
+      "extends": ["plugin:prettier/recommended"]
     },
     {
       "files": ["*.ts", "*.tsx"],

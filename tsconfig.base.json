@@ -15,10 +15,15 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "auth": ["libs/auth/src/index.ts"],
-      "core": ["libs/core/src/index.ts"],
-      "shared-ui": ["libs/ui/src/index.ts"],
-      "ui": ["libs/ui/src/index.ts"]
+      "api": ["libs/core/api/src/index.ts"],
+      "components": ["libs/ui/components/src/index.ts"],
+      "config": ["libs/core/config/src/index.ts"],
+      "layout": ["libs/ui/layout/src/index.ts"],
+      "login": ["libs/auth/login/src/index.ts"],
+      "menu": ["libs/core/menu/src/index.ts"],
+      "navigation": ["libs/core/navigation/src/index.ts"],
+      "root-store": ["libs/core/root-store/src/index.ts"],
+      "utils": ["libs/utils/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

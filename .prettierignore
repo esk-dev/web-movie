@@ -2,3 +2,5 @@
 /dist
 /coverage
 .angular
+/src/index.html
+/.nx/cache

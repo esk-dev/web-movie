@@ -1,0 +1,7 @@
+<a libButton neutral [routerLink]="[menuItem.route]" routerLinkActive="active">
+  @if (iconState) {
+  <i [class]="menuItem.icon"></i>
+  } @else {
+  {{ menuItem.label }}
+  }
+</a>

@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @import './stylesheets/themes.scss';
+  :root {
+    font-family: 'Lexend Deca', -apple-system, BlinkMacSystemFont, Roboto,
+      Ubuntu, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgb(var(--black));
+    color: rgb(var(--base-type));
+    min-height: 100%;
+  }
+
+  body {
+    min-height: 100%;
+  }
+}

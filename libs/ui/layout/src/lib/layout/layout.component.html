@@ -1,0 +1,9 @@
+<!--@if ((isMobile$ | async) === false) {-->
+<lib-sidebar class="sticky top-0 min-h-[450px] h-[100vh]"></lib-sidebar>
+<!--}-->
+<main class="main-container w-full min-h-[100vh] px-3 py-4">
+  <ng-content></ng-content>
+  @if (isMobile$ | async) {
+  <lib-dynamic-dock></lib-dynamic-dock>
+  }
+</main>
